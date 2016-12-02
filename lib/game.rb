@@ -3,6 +3,10 @@ class Game
     @deck = []
   end
 
+  define_method(:deck) do
+    @deck
+  end
+
   define_method(:create_deck) do
     ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
@@ -15,5 +19,9 @@ class Game
       end
     end
     @deck
+  end
+
+  define_method(:shuffle) do
+    @deck.shuffle()
   end
 end

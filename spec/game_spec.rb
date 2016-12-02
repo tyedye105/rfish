@@ -9,4 +9,10 @@ describe(Game) do
       expect(new_game.create_deck().length()).to(eq(52))
     end
   end
+  describe('#shuffle') do
+    it('will shuffle the deck') do
+      new_game = Game.new()
+      expect(new_game.shuffle()).to(eq(new_game.shuffle()))
+    end
+  end
 end
