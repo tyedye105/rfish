@@ -12,7 +12,8 @@ describe(Game) do
   describe('#shuffle') do
     it('will shuffle the deck') do
       new_game = Game.new()
-      expect(new_game.shuffle()).to(eq(new_game.shuffle()))
+      deck1 = new_game.create_deck()
+      expect(deck1.shuffle()).to_not(eq(deck1))
     end
   end
 end
